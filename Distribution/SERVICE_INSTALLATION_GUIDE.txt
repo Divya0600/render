@@ -1,0 +1,90 @@
+================================================================
+RENDER FARM WORKER - WINDOWS SERVICE INSTALLATION
+================================================================
+
+🔧 AUTOMATIC SERVICE INSTALLATION:
+==================================
+After worker installation, you get these files:
+
+✅ install_worker_service.bat   - Install as Windows service
+✅ uninstall_worker_service.bat - Remove Windows service  
+✅ Start_Worker.bat             - Manual launcher
+✅ Desktop shortcut             - Quick access
+
+================================================================
+
+🚀 TO INSTALL WORKER AS SERVICE:
+===============================
+1. Right-click "install_worker_service.bat"
+2. Select "Run as administrator"  
+3. Enter server IP (e.g., 192.168.1.100)
+4. Enter server port (default: 8080)
+5. Service installs and starts automatically!
+
+================================================================
+
+✅ SERVICE BENEFITS:
+===================
+✅ Starts automatically when Windows boots
+✅ Runs in background (no window)
+✅ Restarts if it crashes
+✅ No user login required
+✅ Professional setup for production
+
+================================================================
+
+🛠️ SERVICE MANAGEMENT:
+======================
+✅ Install:   install_worker_service.bat (as admin)
+✅ Remove:    uninstall_worker_service.bat (as admin)
+✅ Stop:      sc stop RenderFarmWorker
+✅ Start:     sc start RenderFarmWorker
+✅ Status:    sc query RenderFarmWorker
+
+================================================================
+
+🎯 TYPICAL WORKFLOW:
+===================
+1. Install worker using RenderFarmSetup.exe
+2. Run install_worker_service.bat as admin
+3. Service starts automatically 
+4. Worker connects to server on boot
+5. Render farm ready 24/7!
+
+================================================================
+
+⚙️ WHAT THE SERVICE DOES:
+=========================
+✅ Service Name: RenderFarmWorker
+✅ Display Name: Render Farm Worker
+✅ Start Type: Automatic
+✅ Runs: worker_node.py with your server settings
+✅ Logs: Check Windows Event Viewer
+
+================================================================
+
+🔄 SERVICE vs MANUAL:
+====================
+SERVICE MODE:
+✅ Automatic startup
+✅ Background operation  
+✅ No user interaction needed
+✅ Professional deployment
+
+MANUAL MODE:
+✅ Desktop shortcut  
+✅ Console window visible
+✅ Easy to stop/start
+✅ Good for testing
+
+================================================================
+
+💡 RECOMMENDATION:
+==================
+For production render farms, always use SERVICE MODE:
+- Workers start automatically 
+- No manual intervention needed
+- Reliable 24/7 operation
+- Professional setup
+
+================================================================

@@ -1,0 +1,157 @@
+================================================================
+RENDER FARM - WHAT HAPPENS AFTER INSTALLATION
+================================================================
+
+AFTER EXE INSTALLATION COMPLETES:
+=================================
+
+🖥️ SERVER INSTALLATION CREATES:
+-------------------------------
+✅ Installation folder with all server files:
+   - main_app.py (main server application)
+   - server.py (core server logic)
+   - unified_app.py (combined interface)
+   - distributed_renderers.py (render management)
+   - worker_deployment_manager.py (worker control)
+   - job_queue_manager.py (job handling)
+   - All config files and dependencies
+
+✅ Launcher files:
+   - Start_Server.bat (in install directory)
+   - Render Farm Server.bat (on desktop)
+
+✅ Configuration:
+   - server_config.json (server settings)
+   - Database setup for job tracking
+
+SERVER NEXT STEPS:
+-----------------
+1. Launch server using:
+   - Desktop shortcut: "Render Farm Server.bat"
+   - Or run: Start_Server.bat from install folder
+   - Or click "Launch Server" in installer
+
+2. Server starts and opens:
+   - Web interface at http://localhost:8080
+   - Command line interface showing status
+
+3. Configure workers:
+   - Access web interface
+   - Go to "Worker Deployment" tab
+   - Add worker machines
+   - Deploy workers remotely (optional)
+
+4. Submit render jobs:
+   - Use web interface
+   - Upload render files
+   - Configure render settings
+   - Start rendering across workers
+
+================================================================
+
+👷 WORKER INSTALLATION CREATES:
+------------------------------
+✅ Installation folder with worker files:
+   - worker_node.py (main worker application)
+   - job_queue_manager.py (job handling)
+   - All required dependencies
+
+✅ Launcher files:
+   - Start_Worker.bat (in install directory)
+   - Render Farm Worker.bat (on desktop)
+
+✅ Configuration:
+   - worker_config.json (with server connection details)
+   - Auto-connect settings
+
+WORKER NEXT STEPS:
+-----------------
+1. Launch worker using:
+   - Desktop shortcut: "Render Farm Worker.bat"
+   - Or run: Start_Worker.bat from install folder
+   - Or click "Launch Worker" in installer
+
+2. Worker automatically:
+   - Connects to specified server (IP:Port from installation)
+   - Registers with server
+   - Shows connection status
+
+3. Worker starts processing:
+   - Receives render jobs from server
+   - Processes tasks automatically
+   - Reports progress back to server
+
+4. Monitor from server:
+   - Check worker status in server web interface
+   - View render progress
+   - See performance metrics
+
+================================================================
+
+🚀 TYPICAL SETUP WORKFLOW:
+==========================
+
+STEP 1: Install Server (Main Machine)
+- Run installer, choose "Server"
+- Launch server
+- Note the server IP address
+
+STEP 2: Install Workers (Render Machines)  
+- Run installer on each machine, choose "Worker"
+- Enter server IP during installation
+- Launch workers
+
+STEP 3: Start Rendering
+- Submit jobs through server web interface
+- Workers automatically pick up jobs
+- Monitor progress in real-time
+
+================================================================
+
+🔧 FILES CREATED IN INSTALLATION:
+=================================
+
+SERVER FILES:
+- main_app.py (GUI application)
+- server.py (core server)
+- unified_app.py (combined interface)
+- distributed_renderers.py
+- worker_deployment_manager.py
+- job_queue_manager.py
+- server_config.json
+- worker_machines.json
+- Start_Server.bat
+
+WORKER FILES:
+- worker_node.py (main worker)
+- job_queue_manager.py
+- worker_config.json  
+- Start_Worker.bat
+
+BOTH GET:
+- requirements.txt
+- config.json
+- app_config.json
+- Desktop shortcuts
+
+================================================================
+
+📱 WEB INTERFACE FEATURES (Server):
+===================================
+- Job queue management
+- Worker status monitoring  
+- Render progress tracking
+- Performance metrics
+- Worker deployment tools
+- File management
+- System logs
+
+🔄 AUTO-FEATURES:
+================
+- Workers auto-connect to server
+- Jobs auto-distribute to available workers
+- Progress auto-updates in real-time
+- Failed jobs auto-retry
+- Workers auto-register on startup
+
+================================================================

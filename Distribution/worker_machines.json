@@ -1,0 +1,33 @@
+{
+  "worker_machines": [
+    {
+      "name": "Worker-01",
+      "ip": "192.168.1.101",
+      "username": "admin",
+      "password": "password",
+      "os": "windows",
+      "worker_path": "C:\\RenderFarm\\worker_node.py",
+      "python_path": "python",
+      "enabled": true,
+      "auto_start": true
+    },
+    {
+      "name": "Worker-02",
+      "ip": "192.168.1.102",
+      "username": "admin",
+      "password": "password",
+      "os": "windows",
+      "worker_path": "C:\\RenderFarm\\worker_node.py",
+      "python_path": "python",
+      "enabled": true,
+      "auto_start": true
+    }
+  ],
+  "deployment_settings": {
+    "connection_timeout": 30,
+    "deployment_timeout": 120,
+    "retry_attempts": 3,
+    "auto_deploy_on_startup": true,
+    "health_check_interval": 60
+  }
+}

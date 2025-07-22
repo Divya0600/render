@@ -1,0 +1,143 @@
+{
+  "server": {
+    "host": "",
+    "port": 8080,
+    "api_timeout": 10,
+    "worker_heartbeat_interval": 10,
+    "worker_offline_timeout": 30
+  },
+  
+  "database": {
+    "path": "render_farm.db",
+    "backup_enabled": true,
+    "backup_interval_hours": 24
+  },
+  
+  "gui": {
+    "window_title": "Render Launcher v0.2 - Distributed",
+    "window_width": 1200,
+    "window_height": 800,
+    "theme": "fusion",
+    "auto_refresh_interval": 2000
+  },
+  
+  "workers": {
+    "default_count": 30,
+    "auto_detect_renderers": true,
+    "max_concurrent_jobs_per_worker": 1,
+    "job_timeout_minutes": 60,
+    "retry_failed_jobs": true,
+    "max_retries": 3
+  },
+  
+  "renderers": {
+    "nuke": {
+      "executable_paths": [
+        "C:\\Program Files\\Nuke*\\Nuke*.exe",
+        "/usr/local/Nuke*/Nuke*",
+        "/Applications/Nuke*/Nuke*.app/Contents/MacOS/Nuke*"
+      ],
+      "default_args": ["-i", "-f", "-x", "-m", "3", "-m", "14", "-V"],
+      "file_extensions": [".nk"],
+      "supports_frame_range": true
+    },
+    
+    "silhouette": {
+      "executable_paths": [
+        "C:\\Program Files\\SilhouetteFX\\Silhouette*\\silhouette.exe",
+        "/Applications/Silhouette*.app/Contents/MacOS/Silhouette*"
+      ],
+      "default_args": [],
+      "file_extensions": [".sfx"],
+      "supports_frame_range": true
+    },
+    
+    "fusion": {
+      "executable_paths": [
+        "C:\\Program Files\\Blackmagic Design\\Fusion*\\Fusion.exe",
+        "C:\\Program Files\\Blackmagic Design\\Fusion*\\FusionRenderNode.exe",
+        "/Applications/Fusion*.app/Contents/MacOS/Fusion*"
+      ],
+      "default_args": ["/render"],
+      "file_extensions": [".comp"],
+      "supports_frame_range": true
+    }
+  },
+  
+  "network": {
+    "shared_storage_paths": [
+      "//192.168.1.100/renderfarm",
+      "//server/projects",
+      "/mnt/shared/renderfarm"
+    ],
+    "path_translation_enabled": true,
+    "path_mappings": {
+      "C:/": "//server/drive_c/",
+      "D:/": "//server/drive_d/",
+      "/Users/": "//server/users/",
+      "/home/": "//server/home/"
+    }
+  },
+  
+  "job_queue": {
+    "default_priority": "normal",
+    "priorities": ["low", "normal", "high", "critical"],
+    "default_batch_size": 10,
+    "max_batch_size": 100,
+    "min_batch_size": 1,
+    "auto_cleanup_completed_jobs": true,
+    "cleanup_after_days": 7
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "file_enabled": false,
+    "file_path": "render_farm.log",
+    "max_file_size_mb": 10,
+    "backup_count": 5,
+    "console_enabled": true
+  },
+  
+  "security": {
+    "api_key_required": false,
+    "api_key": "",
+    "allowed_hosts": ["*"],
+    "max_requests_per_minute": 1000
+  },
+  
+  "performance": {
+    "max_concurrent_jobs": 1000,
+    "worker_poll_interval": 5,
+    "batch_creation_threads": 4,
+    "database_connection_pool_size": 10
+  },
+  
+  "paths": {
+    "temp_directory": "temp",
+    "log_directory": "logs",
+    "scripts_directory": "scripts",
+    "output_directory": "output"
+  },
+  
+  "notifications": {
+    "job_completion_enabled": false,
+    "job_failure_enabled": true,
+    "worker_offline_enabled": true,
+    "email_settings": {
+      "smtp_server": "",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "from_email": "",
+      "to_emails": []
+    }
+  },
+  
+  "advanced": {
+    "memory_limit_mb": 1024,
+    "cpu_affinity_enabled": false,
+    "process_priority": "normal",
+    "error_recovery_enabled": true,
+    "debug_mode": false
+  }
+}

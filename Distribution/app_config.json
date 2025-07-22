@@ -1,0 +1,7 @@
+{
+  "mode": "server",
+  "server_port": 8080,
+  "server_url": "http://localhost:8080",
+  "worker_name": "INL-JC3SQ04",
+  "auto_start": false
+}

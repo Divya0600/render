@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(move build Development/)",
+      "Bash(move dist Development/)",
+      "Bash(move RenderFarmInstaller Development/)",
+      "Bash(mv:*)",
+      "Bash(pip install:*)",
+      "Bash(pyinstaller:*)",
+      "Bash(move:*)",
+      "Bash(rm:*)",
+      "Bash(sc query:*)",
+      "Bash(sc qc:*)",
+      "Bash(sc delete:*)",
+      "Bash(ls:*)",
+      "Bash(sc start:*)",
+      "Bash(where python)"
+    ],
+    "deny": []
+  }
+}

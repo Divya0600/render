@@ -1,0 +1,22 @@
+{
+  "worker_machines": [
+    {
+      "name": "Local-Worker",
+      "ip": "127.0.0.1",
+      "username": "local",
+      "password": "",
+      "os": "windows",
+      "worker_path": "C:\\RenderFarm\\worker_node.py",
+      "python_path": "python",
+      "enabled": false,
+      "auto_start": false
+    }
+  ],
+  "deployment_settings": {
+    "connection_timeout": 30,
+    "deployment_timeout": 120,
+    "retry_attempts": 3,
+    "auto_deploy_on_startup": false,
+    "health_check_interval": 60
+  }
+}

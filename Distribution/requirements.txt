@@ -1,0 +1,36 @@
+# Render Farm System Dependencies
+
+# GUI Framework
+PyQt5>=5.15.0
+
+# HTTP Requests for worker communication
+requests>=2.25.0
+# GPUtil - Removed (replaced with nvidia-smi subprocess calls)
+# Built-in Python modules (included for reference)
+# sqlite3 - Database (built-in)
+# json - JSON handling (built-in)
+# threading - Multi-threading (built-in)
+# subprocess - Process execution (built-in)
+# socket - Network communication (built-in)
+# argparse - Command line parsing (built-in)
+# datetime - Date/time handling (built-in)
+# uuid - Unique ID generation (built-in)
+# platform - System information (built-in)
+# glob - File pattern matching (built-in)
+
+# Required for enhanced performance optimizations
+psutil>=5.8.0  # System monitoring and resource management
+aiofiles>=0.8.0  # Async file operations
+
+# Required for worker deployment
+paramiko>=2.7.0  # SSH connections for Linux/Mac workers
+pywinrm>=0.4.0  # WinRM connections for Windows workers
+
+# Required for installer creation (optional - only for building)
+# pyinstaller>=5.0.0  # Create standalone executables
+# pywin32>=227  # Windows shortcuts and services (Windows only)
+# winshell>=0.6  # Windows shell operations (Windows only)
+
+# Optional: For enhanced functionality
+# watchdog>=2.1.0  # File system monitoring (uncomment if needed)
+# redis>=4.0.0  # Alternative to memory caching (uncomment if Redis is preferred)

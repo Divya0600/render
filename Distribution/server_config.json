@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "host": "",
+  "auto_start_workers": true,
+  "database_path": "render_farm.db"
+}
